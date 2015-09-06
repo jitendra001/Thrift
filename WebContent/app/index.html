@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>Customer Service App</title>
+</head>
+<body ng-app="myApp" ng-controller="customerServiceController as cs">
+  <h3>Customer Service :: Apache Thrift Java script Client Integration with Angular</h3>
+  Enter Customer Id: <input type="text" name="input" ng-model="input.text"><input type="submit" value="Search" ng-click="getCustomer()"><br>
+  <br/>
+  <div ng-show="result">
+  Id: <label>{{id}}</label>	<br>
+  Name: <label>{{name}}</label><br>
+  Address: <label>{{address}}</label> <br> 
+  </div>
+  <div ng-show="isError">
+  Error: <label>{{error}}</label><br></div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="js/ng/angular-route.js"></script>
+  <script src="js/customer/app.js"></script>
+  <script src="js/customer/services.js"></script>
+  <script src="js/customer/controllers.js"></script>
+  
+  <script src="js/thrift/thrift.js"></script>
+  <script src="js/thrift/CustomerService_types.js"></script>  
+  <script src="js/thrift/CustomerService.js"></script>
+  <script src="js/thrift/customer_client.js"></script>
+</body>
+</html>
